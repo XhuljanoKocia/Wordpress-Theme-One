@@ -9,3 +9,5 @@
         <?php wp_head(); ?>
     </head>
     <body>
+        <!-- Calling the menu named primary on our header -->
+        <?php wp_nav_menu(array('theme_location' => 'primary')); ?>

@@ -8,4 +8,16 @@
 
     //Using an action to execute our function above, the first parameter is to include all our scripts and the second one is our function name
     add_action('wp_enqueue_scripts', 'awsome_script_enqueue');
+
+    //With this function we make menu option available on the wordpress dashboard
+    function awsome_theme_setup(){
+        add_theme_support('menus');
+
+        //This creates a new menu display location named primary
+        register_nav_menu('primary', 'Primary Header Navigation');
+        register_nav_menu('secondary', 'Footer Navigation');
+    }
+
+    //This function will be executed after the initialization since if we execute it before it will generate an error
+    add_action('init', 'awsome_theme_setup');
 ?>
