@@ -8,6 +8,13 @@
         <!-- With wp_head() we call all the enqueue styles we created on the functions file -->
         <?php wp_head(); ?>
     </head>
-    <body>
+    <?php
+        if(is_front_page()) :
+            $awsome_classes = array('awsome-class', 'my-class');
+        else :
+            $awsome_classes = array('no-awsome-class');
+        endif;
+    ?>
+    <body <?php body_class($awsome_classes); ?>>
         <!-- Calling the menu named primary on our header -->
         <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
