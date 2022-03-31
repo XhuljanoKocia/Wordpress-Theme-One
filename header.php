@@ -18,3 +18,4 @@
     <body <?php body_class($awsome_classes); ?>>
         <!-- Calling the menu named primary on our header -->
         <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+        <img src="<?php header_image(); ?>" height="<?php echo get_custom_header() -> height; ?>" width="<?php echo get_custom_header() -> width; ?>" alt="">

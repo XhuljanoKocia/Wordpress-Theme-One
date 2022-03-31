@@ -20,4 +20,8 @@
 
     //This function will be executed after the initialization since if we execute it before it will generate an error
     add_action('init', 'awsome_theme_setup');
+
+    add_theme_support('custom-background');
+    add_theme_support('custom-header');
+    add_theme_support('post-thumbnails');
 ?>
