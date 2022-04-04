@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+<div class="row"></div>
+
+    <div class="col-xs-12 col-sm-8">
+
     <?php
         //We check if there are any posts 
         if(have_posts()) :
@@ -15,5 +19,11 @@
             endwhile;
         endif;
     ?>
+
+<div class="col-xs-12 col-sm-4">
+    <?php get_sidebar(); ?>
+</div>
+
+</div>
     
 <?php get_footer(); ?>
