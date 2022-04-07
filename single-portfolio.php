@@ -30,7 +30,7 @@
 						}
 
 					?> || <?php 
-					$terms_list = wp_get_post_terms($post->ID, 'field');
+					$terms_list = wp_get_post_terms($post->ID, 'software');
 
 					$i = 0;
 					foreach($terms_list as $term){ $i++;
